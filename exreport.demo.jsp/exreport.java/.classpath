@@ -2,6 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/rpcfxweb/WebRoot/WEB-INF/lib/commons-beanutils-1.7.0.jar" sourcepath="D:/qsoft/jarlib/lib/commons-beanutils-1.7.0-src.zip"/>
+	<classpathentry kind="lib" path="/exreport.java.web/WebRoot/WEB-INF/lib/commons-beanutils-1.7.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
