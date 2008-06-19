@@ -50,6 +50,21 @@
 	<body>
 		<input type="button" value="保存报表" name="save"
 			onclick="save('c:\\abcd.xls')">
+			
+		<input type="button" value="导出报表" name="export" class="BUTTON"
+			onclick="output()">
+		<input type="button" value="打印报表" name="print" class="BUTTON"
+			onclick="print()">
+		<input type="button" value="打印预览" name="preview" class="BUTTON"
+			onclick="preview()">
+		<input type="button" value="报表转置" name="revers" class="BUTTON"
+			onclick="revers()">
+		<input type="button" value="报表放大" name="zoomin" class="BUTTON"
+			onclick="zoomin()">
+		<input type="button" value="报表缩小" name="zoomout" class="BUTTON"
+			onclick="zoomout()">
+		<input type="button" value=" 关  闭 " name="wclose" class="BUTTON"
+			onclick="window.close();">
 
 		<object classid="clsid:00460182-9E5E-11d5-B7C8-B8269041DD57"
 			id="oframe" width="100%" height="100%">
