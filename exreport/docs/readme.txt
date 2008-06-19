@@ -4,6 +4,8 @@ ExReport Report System
 
 licence: LGPL
 
+author: kimmking wanghaibin
+
 You can use it for free with all purposes,the personal or the commercial,with preserving this file.
 The only suggestion is that if you modify a part of the system,
 please send an email to explain what you improve to the author(kimmking.cn@gmail.com).
