@@ -25,7 +25,8 @@ var ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var metadataarrays = "META_DATA_ARRAYS";
 var metafields = "REPORT_DTO_FIELDS_KEY";
 var exceldatalength = "EXCEL_DATA_LENGTH";
-var fso = new ActiveXObject("Scripting.FileSystemObject");
+var fso				= new ActiveXObject("Scripting.FileSystemObject");
+var filehelper  	= new ActiveXObject("filehelper.filedown");
 var dsofilename = "";
 var preprocess = true;
 var isrevers = false;
@@ -218,7 +219,7 @@ function downloaddata() {
 		fso.DeleteFile(tempfile);
 	}
 	// alert(tempfile);
-	filehelper.GET(serverurl, serverport, downservlet, tempfile);
+	filehelper.DownloadFile(serverurl +  downservlet, tempfile);
 	return tempfile;
 }
 function downloadtemplate() {
@@ -230,7 +231,7 @@ function downloadtemplate() {
 		fso.DeleteFile(tempfile);
 	}
 	// alert(tempfile);
-	filehelper.GET(serverurl, serverport, contextpath + "/" + thistempfile,
+	filehelper.DownloadFile(serverurl + contextpath + "/" + thistempfile,
 			tempfile);
 	return tempfile;
 }
