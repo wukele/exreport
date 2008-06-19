@@ -17,8 +17,8 @@
   var isdowndata = false;  //是否是下载数据文件方式
  
   var colsname = 'code,name,area,sum,lastmonth,lastyear,term'; // 需要处理的列名
-  var serverurl ='localhost';//服务器端ip
-  var serverport = '8080';   //端口
+  var serverurl ='http://localhost:8080';//服务器端ip
+  //var serverport = '8080';   //端口
   var contextpath = '/exreport/xls'; //模板路径
   var templatename = 'report1';     //模板名称
   var extensename = '.xls';			//模板文件扩展名
@@ -66,9 +66,6 @@
 			<PARAM NAME="Toolbars" VALUE="0">
 			<PARAM NAME="Menubar" VALUE="0">
 		</OBJECT>
-		<object classid="clsid:17181852-F536-4B8D-8BA4-6CA8CD61D7AA"
-			id="filehelper">
-		</object>
 	</body>
 	<script type="text/javascript">
 	  
