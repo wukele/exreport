@@ -161,6 +161,10 @@ function draw() {
 }
 function openfile(filename) {
 	dsofilename = filename;
+	if(typeof(oframe)=="undefined")
+	{
+	    oframe = document.all.oframe;
+	 }
 	oframe.Open(filename);
 	oframe.ActiveDocument.Application.CommandBars("Web").Visible = false;
 }

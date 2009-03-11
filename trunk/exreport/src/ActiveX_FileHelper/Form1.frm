@@ -33,7 +33,9 @@ Dim fd As New filedown
 
 'fd.DownloadFile "http://localhost:8080/naf/xls/5w.zip", fd.GetTempPath() + "5.zip"
 
-MsgBox fd.GetTempPath() + "5.zip"
+fd.DownloadFile "http://10.1.5.142:6888/obs/FileDowloadServlet?accid=&saccessoryadd=leaderleavetemp.doc&sinfoid=&downtype=2", "C:\5.doc"
+
+'MsgBox fd.GetTempPath() + "5.zip"
 
 
 End Sub

@@ -32,7 +32,7 @@ Public Function GetTempPath() As String
 End Function
 Public Function DownloadFile(ByVal downUrl As String, ByVal localpath As String) As Boolean
     
-On Error GoTo err
+'On Error GoTo err
 
 Dim XMLHTTP As New XMLHTTP
  
@@ -49,7 +49,7 @@ Dim XMLHTTP As New XMLHTTP
   DownloadFile = True
     Exit Function
 err:
-    MsgBox "文件下载失败!", vbOKOnly, "系统提示:"
+    MsgBox err.Description & "-文件下载失败!", vbOKOnly, "系统提示:"
     
     DownloadFile = False
 End Function
