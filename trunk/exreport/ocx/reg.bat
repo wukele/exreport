@@ -1,5 +1,5 @@
 @echo off
-copy zlib.dll %systemroot%\system32\
+copy zlibwapi.dll %systemroot%\system32\
 regsvr32 dsoframer.ocx /s
 regsvr32 FileHelper.dll /s
 regsvr32 scrrun.dll /s

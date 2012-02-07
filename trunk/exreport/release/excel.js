@@ -46,11 +46,10 @@ function createReport(tmfile1) {
 function drawReport() {
 	var edata = bean[exceldataarrays];
 	var mdata = bean[metadataarrays];
-	var fields = bean[metafields];
+
 	var i;
 	// var start = new Date().getTime();
-	var cols = fields.split(",");
-	var vbas = new Array(cols.length);
+
 	var xlDoc = oframe.ActiveDocument;
 	xlDoc.Application.Run("showbar");
 
@@ -70,18 +69,18 @@ function drawReport() {
 		writeReport("正在下载报表数据...");
 		var zipfile = downloaddata();
 
-		xlSht3.Cells(1 + mdata.length, 1) = zipfilepath;
-		xlSht3.Cells(1 + mdata.length, 2) = zipfile;
-
-		xlSht3.Cells(2 + mdata.length, 1) = unzipfolder;
-		xlSht3.Cells(2 + mdata.length, 2) = zipfile.substring(0,zipfile.indexOf(".")) + "\\";
-
-		writeReport("正在导入数据...");
+		//xlSht3.Cells(1 + mdata.length, 1) = zipfilepath;
+		//xlSht3.Cells(1 + mdata.length, 2) = zipfile;
+		//xlSht3.Cells(2 + mdata.length, 1) = unzipfolder;
+		//xlSht3.Cells(2 + mdata.length, 2) = zipfile.substring(0,zipfile.indexOf(".")) + "\\";
+	}
+	writeReport("正在导入数据...");
+	if(!!reportdatazip){
 		executeMacro("unZipAndImport");
-
 	} else {
-
-		writeReport("正在导入数据...");
+		var fields = bean[metafields];
+		var cols = fields.split(",");
+		var vbas = new Array(cols.length);
 		// end = new Date().getTime() - end;
 		// alert(end );//15ms
 		// end = new Date().getTime();

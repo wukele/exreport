@@ -3,7 +3,7 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html"; charset="gb2312">
-		<title>行一级，列二级交叉报表</title>
+		<title>普通报表</title>
 		<script type="text/javascript" src="excel.js"></script>
 		<script type="text/javascript">
   
@@ -43,8 +43,7 @@
   };
  
   var isdowndata = false;  //是否是下载数据文件方式
- var reportdatazip = false; //是否是zip格式数据
- 
+  var reportdatazip = false;
   var colsname = 'code,name,area,sum,lastmonth,lastyear,term'; // 需要处理的列名
   var serverurl ='http://localhost:8080';//服务器端ip
   //var serverport = '8080';   //端口
@@ -56,7 +55,7 @@
   
   var fileid = ""; //文件名附加字符串，可用于判断是否需要重新下载
   
-  var reporttype = 1; // 报表类型, 0普通, 1 交叉表 
+  var reporttype = 0; // 报表类型, 0普通, 1 交叉表 
      
      
       function   document.onkeydown(){   
@@ -114,7 +113,7 @@
 	<script type="text/javascript">
 	  
 	   var localfolder = "D:\\study\\java\\exreport\\trunk\\exreport\\release\\"; //你需要把这个路径改为你实际的绝对路径。不可使用相对路径。
-	   var tmfile = localfolder + "report1.xls"; //下载模板
+	   var tmfile = localfolder + "report0.xls"; //下载模板
 	  
 	  window.setTimeout('createReport(tmfile);',500); //创建报表
 	  
