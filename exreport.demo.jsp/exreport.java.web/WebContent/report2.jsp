@@ -8,27 +8,46 @@
   
   //所有数据的bean
   	var bean = {
-  	<%
-    String ss = test.TestJson1.testa(5000);
-    out.println(ss);
-     %>
-  };
+  		"META_DATA_ARRAYS":[
+  		"EXCEL_DATA_LENGTH",
+  		"unit",
+  		"area",
+  		"owner",
+  		"number",
+  		"REPORT_DTO_FIELDS_KEY",
+  		"HIDDEN_FIELDS",
+  		"industry",
+  		"date"
+  		],
+  		"EXCEL_DATA_LENGTH":5000,
+  		"unit":"万元",
+  		"area":"beijing",
+  		"owner":"国有",
+  		"DTO_DATA_ARRAYS":[
+  		],
+  		"number":111111111,
+  		"REPORT_DTO_FIELDS_KEY":"code,name,area,sum,lastmonth,lastyear,term",
+  		"HIDDEN_FIELDS":"lastmonth,lastyear",
+  		"industry":"金融",
+  		"date":"2012-2-7 16:45:06"
+  	};
  
-  var isdowndata = false;  //是否是下载数据文件方式
- 
+  var isdowndata = true;  //是否是下载数据文件方式
+  var downservlet = "/exreport/data/data.zip"; //数据文件路径,动态数据可以通过servlet获取数据拼装成csv格式输出
+  //var downservlet = "/naf/ReportDataServlet?rows=50000&cols=" + colsname;
+  
   var colsname = 'code,name,area,sum,lastmonth,lastyear,term'; // 需要处理的列名
   var serverurl ='http://localhost:8080';//服务器端ip
   //var serverport = '8080';   //端口
   var contextpath = '/exreport/xls'; //模板路径
-  var templatename = 'report1';     //模板名称
+  var templatename = 'report2';     //模板名称
   var extensename = '.xls';			//模板文件扩展名
-  //var downservlet = "/naf/xls/5w.zip"; //数据文件路径
-  //var downservlet = "/naf/ReportDataServlet?rows=50000&cols=" + colsname;
   
   var fileid = "";
 
 var reporttype = 1; // 报表类型, 0普通, 1 交叉表 
-     
+var reportdatazip = true; //是否是zip格式数据
+	     
      
       function   document.onkeydown(){   
          if( window.event.ctrlKey && window.event.shiftKey && window.event.keyCode==39)
