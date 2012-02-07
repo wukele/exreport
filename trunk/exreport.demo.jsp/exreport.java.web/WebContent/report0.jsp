@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>行一级，列二级交叉报表</title>
+		<title>普通数据报表</title>
 		<script type="text/javascript" src="js/excel.js"></script>
 		<script type="text/javascript">
   
@@ -18,16 +18,12 @@
  
   var colsname = 'code,name,area,sum,lastmonth,lastyear,term'; // 需要处理的列名
   var serverurl ='http://localhost:8080';//服务器端ip
-  //var serverport = '8080';   //端口
   var contextpath = '/exreport/xls'; //模板路径
-  var templatename = 'report1';     //模板名称
+  var templatename = 'report0';     //模板名称
   var extensename = '.xls';			//模板文件扩展名
-  //var downservlet = "/naf/xls/5w.zip"; //数据文件路径
-  //var downservlet = "/naf/ReportDataServlet?rows=50000&cols=" + colsname;
-  
   var fileid = "";
 
-var reporttype = 1; // 报表类型, 0普通, 1 交叉表 
+var reporttype = 0; // 报表类型, 0普通, 1 交叉表 
      
      
       function   document.onkeydown(){   

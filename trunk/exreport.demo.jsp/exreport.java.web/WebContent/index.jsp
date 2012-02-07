@@ -2,20 +2,16 @@
 
 <html>
 	<head>
-		<title>My JSP '1.jsp' starting page</title>
+		<title>报表demo -- exreport</title>
 	</head>
 
 	<body>
-		<div id="logo" width="100%" height="100%">
-			<img src="images/blue-loading.gif"></img><span id="tip">正在加载页面...</span>
-		</div>
-		<div id="content" width="100%" height="100%" style="display: block">
-			<iframe id="report" FRAMEBORDER="0" width="100%" height="100%" src="report1.jsp">
-		</div>
-		<script type="text/javascript">
-		//document.frames["report"].src = "";
-		//alert(1);
-  	</script>
+	报表模式:
+		<ul>
+			<li><a href="index0.jsp">普通报表</a></li>
+			<li><a href="index1.jsp">交叉报表</a></li>
+			<li><a href="index2.jsp">大数据量压缩方式生成报表</a></li>
+		</ul>
 	</body>
 
 </html>
